@@ -42,10 +42,10 @@ namespace WhileLoops
         }
 
         private void moveButton_Click(object sender, EventArgs e)
-        {
+        {          
             Graphics g = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
-    
+
             //initialize
             int x = 0;
             int y = 150; 		    
@@ -56,9 +56,8 @@ namespace WhileLoops
                 //act
                 g.Clear(Color.Black);
                 g.FillRectangle(drawBrush, x, y, 10, 10);
-
                 Thread.Sleep(5);
-
+                
                 //change
                 x++;
             }
@@ -98,7 +97,7 @@ namespace WhileLoops
             while (rgbVal < 256)
             {
                 //act
-                drawBrush.Color = Color.FromArgb(0 + rgbVal, 0 , 0);
+                drawBrush.Color = Color.FromArgb(0 , 0 , 0 + rgbVal);
 
                 g.Clear(Color.Black);
                 g.FillRectangle(drawBrush, 50, 150, 50, 50);

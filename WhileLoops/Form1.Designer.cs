@@ -40,24 +40,27 @@
             // 
             this.starLabel.AutoSize = true;
             this.starLabel.ForeColor = System.Drawing.Color.White;
-            this.starLabel.Location = new System.Drawing.Point(16, 24);
+            this.starLabel.Location = new System.Drawing.Point(24, 37);
+            this.starLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.starLabel.Name = "starLabel";
-            this.starLabel.Size = new System.Drawing.Size(91, 13);
+            this.starLabel.Size = new System.Drawing.Size(134, 20);
             this.starLabel.TabIndex = 0;
             this.starLabel.Text = "How Many Stars?";
             // 
             // starInput
             // 
-            this.starInput.Location = new System.Drawing.Point(118, 19);
+            this.starInput.Location = new System.Drawing.Point(177, 29);
+            this.starInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.starInput.Name = "starInput";
-            this.starInput.Size = new System.Drawing.Size(45, 20);
+            this.starInput.Size = new System.Drawing.Size(66, 26);
             this.starInput.TabIndex = 1;
             // 
             // starButton
             // 
-            this.starButton.Location = new System.Drawing.Point(185, 15);
+            this.starButton.Location = new System.Drawing.Point(278, 23);
+            this.starButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.starButton.Name = "starButton";
-            this.starButton.Size = new System.Drawing.Size(58, 26);
+            this.starButton.Size = new System.Drawing.Size(87, 40);
             this.starButton.TabIndex = 2;
             this.starButton.Text = "Enter";
             this.starButton.UseVisualStyleBackColor = true;
@@ -65,9 +68,10 @@
             // 
             // moveButton
             // 
-            this.moveButton.Location = new System.Drawing.Point(19, 77);
+            this.moveButton.Location = new System.Drawing.Point(28, 118);
+            this.moveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.moveButton.Name = "moveButton";
-            this.moveButton.Size = new System.Drawing.Size(71, 24);
+            this.moveButton.Size = new System.Drawing.Size(106, 37);
             this.moveButton.TabIndex = 3;
             this.moveButton.Text = "Movement";
             this.moveButton.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@
             // 
             // growButton
             // 
-            this.growButton.Location = new System.Drawing.Point(105, 78);
+            this.growButton.Location = new System.Drawing.Point(158, 120);
+            this.growButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.growButton.Name = "growButton";
-            this.growButton.Size = new System.Drawing.Size(75, 23);
+            this.growButton.Size = new System.Drawing.Size(112, 35);
             this.growButton.TabIndex = 4;
             this.growButton.Text = "Grow";
             this.growButton.UseVisualStyleBackColor = true;
@@ -85,9 +90,10 @@
             // 
             // fadeButton
             // 
-            this.fadeButton.Location = new System.Drawing.Point(197, 78);
+            this.fadeButton.Location = new System.Drawing.Point(296, 120);
+            this.fadeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fadeButton.Name = "fadeButton";
-            this.fadeButton.Size = new System.Drawing.Size(75, 23);
+            this.fadeButton.Size = new System.Drawing.Size(112, 35);
             this.fadeButton.TabIndex = 5;
             this.fadeButton.Text = "Fade";
             this.fadeButton.UseVisualStyleBackColor = true;
@@ -95,16 +101,18 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(447, 403);
             this.Controls.Add(this.fadeButton);
             this.Controls.Add(this.growButton);
             this.Controls.Add(this.moveButton);
             this.Controls.Add(this.starButton);
             this.Controls.Add(this.starInput);
             this.Controls.Add(this.starLabel);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "while Loops";
             this.ResumeLayout(false);
