@@ -19,43 +19,47 @@ namespace WhileLoops
 
         private void starButton_Click(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
+            Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
-
-            int counter, numStars;
-
-            g.Clear(Color.Black);
-            numStars = Convert.ToInt16(starInput.Text);
-
+            
             //initialize
-            counter = 1;
+            int counter = 1;
+            int starSize = 20;
+            int x = 50;
+            int y = 20;
+
+            //get input
+            int numStars = Convert.ToInt16(starInput.Text);
+
+            formGraphics.Clear(Color.Black);
 
             //test
             while (counter <= numStars)
             {
                 //act
-                g.FillEllipse(drawBrush, 20 * counter, 50, 20, 20);
+                formGraphics.FillEllipse(drawBrush, starSize * counter, x, y, starSize);
 
                 //change
-                counter = counter + 1;
+                counter++; // counter = counter + 1;
             }
         }
 
         private void moveButton_Click(object sender, EventArgs e)
         {          
-            Graphics g = this.CreateGraphics();
+            Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
 
             //initialize
             int x = 0;
-            int y = 150; 		    
+            int y = 150;
+            int starSize = 10;
             
             //test
-            while (x < this.Width-20)	
+            while (x < this.Width-starSize)	
             {
                 //act
-                g.Clear(Color.Black);
-                g.FillRectangle(drawBrush, x, y, 10, 10);
+                formGraphics.Clear(Color.Black);
+                formGraphics.FillRectangle(drawBrush, x, y, starSize, starSize);
                 Thread.Sleep(5);
                 
                 //change
@@ -65,47 +69,55 @@ namespace WhileLoops
 
         private void growButton_Click(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
+            Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
 
             //initialize
-            int pixels = 1;
-          	    
+            int pixelGrow = 1;
+            int x = 50;
+            int y = 150;
+            int starSize = 50;
+                	    
             //test
-            while (pixels < 50)	
+            while (pixelGrow < 50)	
             {
                 //act
-                g.Clear(Color.Black);
-                g.FillRectangle(drawBrush, 50, 150, 50 + pixels, 50 + pixels);
+                formGraphics.Clear(Color.Black);
+                formGraphics.FillRectangle(drawBrush, x, y, starSize + pixelGrow, starSize + pixelGrow);
             
                 Thread.Sleep(5);
 
                 //change
-                pixels++;	
+                pixelGrow++;	
             }
         }
 
         private void fadeButton_Click(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
+            Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
 
             //initialize
-            int rgbVal = 1;
+            int r = 0;
+            int g = 0;
+            int b = 1;
+            int x = 50;
+            int y = 150;
+            int starSize = 50;
 
             //test
-            while (rgbVal < 256)
+            while (b < 256)
             {
                 //act
-                drawBrush.Color = Color.FromArgb(0 , 0 , 0 + rgbVal);
+                drawBrush.Color = Color.FromArgb(r , g , b);
 
-                g.Clear(Color.Black);
-                g.FillRectangle(drawBrush, 50, 150, 50, 50);
+                formGraphics.Clear(Color.Black);
+                formGraphics.FillRectangle(drawBrush, x, y, starSize, starSize);
 
                 Thread.Sleep(10);
 
                 //change
-                rgbVal++;
+                b++;
             }
         }
     }
