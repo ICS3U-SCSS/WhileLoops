@@ -25,8 +25,8 @@ namespace WhileLoops
             //initialize
             int counter = 1;
             int starSize = 20;
-            int x = 50;
-            int y = 20;
+            int x = 0;
+            int y = 50;
 
             //get input
             int numStars = Convert.ToInt16(starInput.Text);
@@ -37,8 +37,8 @@ namespace WhileLoops
             while (counter <= numStars)
             {
                 //act
-                formGraphics.FillEllipse(drawBrush, starSize * counter, x, y, starSize);
-
+                formGraphics.FillEllipse(drawBrush, x + (starSize * counter), y, starSize, starSize);
+                
                 //change
                 counter++; // counter = counter + 1;
             }
